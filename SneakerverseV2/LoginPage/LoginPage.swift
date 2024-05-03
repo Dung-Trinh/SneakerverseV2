@@ -1,7 +1,11 @@
-import Foundation
 import SwiftUI
+import _AuthenticationServices_SwiftUI
+import FirebaseCore
+import GoogleSignInSwift
+import GoogleSignIn
+import FirebaseAuth
 
-struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
+struct LoginPage<ViewModel>: View where ViewModel: LoginPageViewModel {
     @StateObject var viewModel: ViewModel
     @EnvironmentObject var router: Router
     
@@ -14,41 +18,37 @@ struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
             VStack(spacing: Styleguide.Margin.medium) {
                 emailInputField
                 passwordInputField
+                if let errorMessage = viewModel.errorMessage {
+                    withAnimation {
+                        Text(errorMessage).foregroundColor(.red)
+                    }
+                }
                 PrimaryButton(
-                    title: "Sign Up",
-                    color: .green,
+                    title: "Login",
+                    color: .blue,
                     action: {
                         Task {
-                            await viewModel.didTapSignup()
+                            await viewModel.didTappedLogin()
                         }
                     }
                 )
-            }.padding(.bottom, Styleguide.Margin.extraLarge)
-            HStack {
-                dividerLine
-                Text("OR").foregroundColor(.gray)
-                dividerLine
-            }.padding(.bottom, Styleguide.Margin.medium)
-            PrimaryButton(
-                title: "Sign up with Google",
-                color: .blue.opacity(0.8),
-                image: Image("googleLogo"),
-                action: {
-                    Task {
-                        await viewModel.handleSignupWithGoogle(viewController: getRootViewController())
-                    }
-                }
-            )
+                GoogleSignInButton(action: handleGoogleLogin)
+            }
+            
             Spacer()
             HStack {
-                Text("Already have an account?").foregroundColor(.gray)
+                Text("Don't have an account?").foregroundColor(.gray)
                 Button {
-                    viewModel.didTapLogin()
+                    router.pushView(view: .signupPage)
                 } label: {
-                    Text("Log in").foregroundColor(.black)
+                    Text("Sign up").foregroundColor(.black)
                 }
             }
-        }.padding()
+        }
+        .padding()
+        .onAppear{
+            viewModel.setupRouter(router)
+        }
     }
     
     @ViewBuilder
@@ -72,16 +72,15 @@ struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
         )
     }
     
-    @ViewBuilder
-    private var dividerLine: some View {
-        VStack {
-            Divider().background(.gray)
+    private func handleGoogleLogin() {
+        Task {
+            await viewModel.handleSignInButton(viewController: getRootViewController())
         }
     }
 }
 
 #Preview {
-    SignupPage(
-        viewModel: SignupPageViewModelImpl()
+    LoginPage(
+        viewModel: LoginPageViewModelImpl(loginAdapter: LoginSignupNetworkAdapterImpl())
     )
 }

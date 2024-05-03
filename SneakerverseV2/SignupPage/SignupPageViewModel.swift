@@ -9,16 +9,29 @@ protocol SignupPageViewModel: ObservableObject {
     
     func didTapSignup() async
     func didTapLogin()
-    func handleSignupWithGoogle(viewController: UIViewController)
+    func handleSignupWithGoogle(viewController: UIViewController) async
 }
 
 class SignupPageViewModelImpl: SignupPageViewModel {
-    var email: String = ""
-    var password: String = ""
+    @Published var email: String = ""
+    @Published var password: String = ""
+    
+    private let loginAdapter: LoginSignupNetworkAdapter
+    
+    init(loginAdapter: LoginSignupNetworkAdapter) {
+        self.loginAdapter = loginAdapter
+    }
+    
+    convenience init() {
+        self.init(loginAdapter: LoginSignupNetworkAdapterImpl())
+    }
     
     func didTapSignup() async {
         do {
-            let response = try await Auth.auth().createUser(withEmail: email, password: password)
+            let response = try await Auth.auth().createUser(
+                withEmail: email,
+                password: password
+            )
             print(response.user)
         } catch {
             // TODO: adding error handling
@@ -29,41 +42,11 @@ class SignupPageViewModelImpl: SignupPageViewModel {
         // TODO: implemeting navigation
     }
     
-    func handleSignupWithGoogle(viewController: UIViewController) {
-        guard let clientID = FirebaseApp.app()?.options.clientID else { return }
-        
-        // Create Google Sign In configuration object.
-        let config = GIDConfiguration(clientID: clientID)
-        GIDSignIn.sharedInstance.configuration = config
-        
-        // Start the sign in flow!
-        GIDSignIn.sharedInstance.signIn(withPresenting: viewController) { result, error in
-            guard error == nil else {
-                print(error?.localizedDescription)
-                // ...
-                return
-            }
-            
-            guard let user = result?.user,
-                  let idToken = user.idToken?.tokenString
-            else {
-                // ...
-                return
-            }
-            
-            let credential = GoogleAuthProvider.credential(
-                withIDToken: idToken,
-                accessToken: user.accessToken.tokenString
-            )
-            Auth.auth().signIn(with: credential) { authResult, error in
-                if let error = error {
-                    print("authResult error: ", error.localizedDescription)
-                }
-                
-                if authResult?.additionalUserInfo?.isNewUser == true {
-                    // TODO: adding signup logic
-                }
-            }
+    func handleSignupWithGoogle(viewController: UIViewController) async {
+        do {
+            try await loginAdapter.signupWithGoogle(viewController: viewController)
+        } catch let err{
+            print(err.localizedDescription)
         }
     }
 }

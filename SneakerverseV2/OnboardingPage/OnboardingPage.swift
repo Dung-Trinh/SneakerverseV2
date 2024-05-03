@@ -2,10 +2,11 @@ import SwiftUI
 
 struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel {
     @StateObject var viewModel: ViewModel
+    @EnvironmentObject var router: Router
     
     var body: some View {
         NavigationStack(
-            path: $viewModel.navigationPath
+            path: $router.navPath
         ) {
             VStack {
                 TabView {
@@ -24,11 +25,13 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
             .navigationDestination(for: String.self) { page in
                 switch page {
                 case "LoginPage":
-                    EmptyView()
+                    LoginPage(viewModel: LoginPageViewModelImpl())
                 case "SignupPage":
                     SignupPage(viewModel: SignupPageViewModelImpl())
+                case "HomePage":
+                    Text("HomePage")
                 default:
-                    EmptyView()
+                    Text("DefaultPage")
                 }
             }
         }
@@ -40,14 +43,14 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
                 title: "Sign up",
                 color: .blue,
                 action: {
-                    viewModel.signupTapped()
+                    router.pushView(view: .signupPage)
                 }
             )
             PrimaryButton(
                 title: "Login",
                 color: .blue,
                 action: {
-                    viewModel.loginTapped()
+                    router.pushView(view: .loginPage)
                 }
             )
         }

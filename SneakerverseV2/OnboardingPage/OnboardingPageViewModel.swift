@@ -1,26 +1,26 @@
 import Foundation
 import SwiftUI
 
-protocol OnboardingPageViewModel: ObservableObject {
-    var navigationPath: NavigationPath { get set }
+enum DestinationView: String {
+    case loginPage = "LoginPage"
+    case signupPage = "SignupPage"
+    case homePage = "HomePage"
+}
+
+final class Router: ObservableObject {
+    @Published var navPath: NavigationPath = .init()
     
+    func pushView(view: DestinationView){
+        navPath.append(view.rawValue)
+    }
+}
+
+protocol OnboardingPageViewModel: ObservableObject {
     func loadContent() async
-    func loginTapped()
-    func signupTapped()
 }
 
 class OnboardingPageViewModelImpl: OnboardingPageViewModel {
-    @Published var navigationPath: NavigationPath = NavigationPath()
-    
     func loadContent() async {
         // TODO: add content
-    }
-    
-    func loginTapped() {
-        navigationPath.append("LoginPage")
-    }
-    
-    func signupTapped() {
-        navigationPath.append("SignupPage")
     }
 }
