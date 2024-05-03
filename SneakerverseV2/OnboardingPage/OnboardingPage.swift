@@ -25,8 +25,8 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
                 switch page {
                 case "LoginPage":
                     EmptyView()
-                case "SignUpPage":
-                    EmptyView()
+                case "SignupPage":
+                    SignupPage(viewModel: SignupPageViewModelImpl())
                 default:
                     EmptyView()
                 }

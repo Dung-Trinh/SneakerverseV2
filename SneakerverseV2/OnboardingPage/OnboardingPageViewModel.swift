@@ -21,6 +21,6 @@ class OnboardingPageViewModelImpl: OnboardingPageViewModel {
     }
     
     func signupTapped() {
-        navigationPath.append("SignUpPage")
+        navigationPath.append("SignupPage")
     }
 }
