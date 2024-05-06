@@ -3,7 +3,7 @@ import SwiftUI
 
 struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
     @StateObject var viewModel: ViewModel
-    @EnvironmentObject var router: Router
+    @EnvironmentObject var router: RouterImpl
     
     var body: some View {
         VStack {
@@ -15,30 +15,30 @@ struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
                 emailInputField
                 passwordInputField
                 PrimaryButton(
-                    title: "Sign Up",
-                    color: .green,
+                    title: "Sign up",
+                    color: .blue,
                     action: {
                         Task {
                             await viewModel.didTapSignup()
                         }
                     }
                 )
-            }.padding(.bottom, Styleguide.Margin.extraLarge)
-            HStack {
-                dividerLine
-                Text("OR").foregroundColor(.gray)
-                dividerLine
-            }.padding(.bottom, Styleguide.Margin.medium)
-            PrimaryButton(
-                title: "Sign up with Google",
-                color: .blue.opacity(0.8),
-                image: Image("googleLogo"),
-                action: {
-                    Task {
-                        await viewModel.handleSignupWithGoogle(viewController: getRootViewController())
-                    }
+                HStack {
+                    dividerLine
+                    Text("OR").foregroundColor(.gray)
+                    dividerLine
                 }
-            )
+                PrimaryButton(
+                    title: "Sign up with Google",
+                    color: .gray.opacity(0.8),
+                    image: Image("googleLogo"),
+                    action: {
+                        Task {
+                            await viewModel.handleSignupWithGoogle(viewController: getRootViewController())
+                        }
+                    }
+                )
+            }.padding(.bottom, Styleguide.Margin.medium)
             Spacer()
             HStack {
                 Text("Already have an account?").foregroundColor(.gray)
@@ -48,7 +48,11 @@ struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
                     Text("Log in").foregroundColor(.black)
                 }
             }
-        }.padding()
+        }
+        .padding()
+        .onAppear{
+            viewModel.setupRouter(router)
+        }
     }
     
     @ViewBuilder

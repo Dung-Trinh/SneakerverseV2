@@ -9,7 +9,7 @@ protocol LoginPageViewModel: ObservableObject {
     var password: String { get set }
     var errorMessage: String? { get }
     
-    func setupRouter(_ router: Router)
+    func setupRouter(_ router: RouterImpl)
     func didTappedLogin() async
     func handleSignInButton(viewController: UIViewController) async
 }
@@ -20,7 +20,7 @@ class LoginPageViewModelImpl: LoginPageViewModel {
     @Published var errorMessage: String?
     
     private let loginAdapter: LoginSignupNetworkAdapter
-    private var router: Router?
+    private var router: RouterImpl?
     
     init(loginAdapter: LoginSignupNetworkAdapter) {
         self.loginAdapter = loginAdapter
@@ -50,7 +50,7 @@ class LoginPageViewModelImpl: LoginPageViewModel {
         }
     }
     
-    func setupRouter(_ router: Router) {
+    func setupRouter(_ router: RouterImpl) {
         self.router = router
     }
     

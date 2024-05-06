@@ -11,6 +11,7 @@ protocol LoginSignupNetworkAdapter {
     func login(email: String, password: String) async throws
     func loginWithGoogle(viewController: UIViewController) async throws
     func signupWithGoogle(viewController: UIViewController) async throws
+    func createUser(email: String, password: String) async throws
 }
 
 class LoginSignupNetworkAdapterImpl: LoginSignupNetworkAdapter {
@@ -49,5 +50,12 @@ class LoginSignupNetworkAdapterImpl: LoginSignupNetworkAdapter {
         
         let authResult = try await Auth.auth().signIn(with: credential)
         return authResult
+    }
+    
+    func createUser(email: String, password: String) async throws {
+        try await Auth.auth().createUser(
+            withEmail: email,
+            password: password
+        )
     }
 }

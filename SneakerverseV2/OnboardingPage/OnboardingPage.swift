@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel {
     @StateObject var viewModel: ViewModel
-    @EnvironmentObject var router: Router
+    @EnvironmentObject var router: RouterImpl
     
     var body: some View {
         NavigationStack(

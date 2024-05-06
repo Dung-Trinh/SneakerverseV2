@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51AF3162BE8B33800A7B4AD /* LoginPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF3152BE8B33800A7B4AD /* LoginPageViewModelTests.swift */; };
+		A51AF3182BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF3172BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift */; };
+		A51AF31B2BE8B50200A7B4AD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF31A2BE8B50200A7B4AD /* Router.swift */; };
+		A51AF31C2BE8B50200A7B4AD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF31A2BE8B50200A7B4AD /* Router.swift */; };
+		A51AF3202BE8BD7000A7B4AD /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4A72BE4747D00272BB6 /* ViewExtension.swift */; };
+		A51AF3232BE8BEF800A7B4AD /* SignupPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF3222BE8BEF800A7B4AD /* SignupPageViewModelTests.swift */; };
 		A547C4492BE3BFE200272BB6 /* SneakerverseV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4482BE3BFE200272BB6 /* SneakerverseV2App.swift */; };
 		A547C44D2BE3BFE500272BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547C44C2BE3BFE500272BB6 /* Assets.xcassets */; };
 		A547C4502BE3BFE500272BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547C44F2BE3BFE500272BB6 /* Preview Assets.xcassets */; };
@@ -40,8 +46,8 @@
 		A547C4AD2BE55AA600272BB6 /* LoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4AB2BE55AA600272BB6 /* LoginPage.swift */; };
 		A547C4AF2BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4AE2BE55AD800272BB6 /* LoginPageViewModel.swift */; };
 		A547C4B02BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4AE2BE55AD800272BB6 /* LoginPageViewModel.swift */; };
-		A547C4B22BE55BCD00272BB6 /* LoginNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4B12BE55BCD00272BB6 /* LoginNetworkAdapter.swift */; };
-		A547C4B32BE55BCD00272BB6 /* LoginNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4B12BE55BCD00272BB6 /* LoginNetworkAdapter.swift */; };
+		A547C4B22BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4B12BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift */; };
+		A547C4B32BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4B12BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A51AF3152BE8B33800A7B4AD /* LoginPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewModelTests.swift; sourceTree = "<group>"; };
+		A51AF3172BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedLoginSignupNetworkAdapter.swift; sourceTree = "<group>"; };
+		A51AF31A2BE8B50200A7B4AD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A51AF3222BE8BEF800A7B4AD /* SignupPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewModelTests.swift; sourceTree = "<group>"; };
 		A547C4452BE3BFE200272BB6 /* SneakerverseV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakerverseV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A547C4482BE3BFE200272BB6 /* SneakerverseV2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerverseV2App.swift; sourceTree = "<group>"; };
 		A547C44C2BE3BFE500272BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +85,7 @@
 		A547C4A92BE4777700272BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A547C4AB2BE55AA600272BB6 /* LoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPage.swift; sourceTree = "<group>"; };
 		A547C4AE2BE55AD800272BB6 /* LoginPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPageViewModel.swift; sourceTree = "<group>"; };
-		A547C4B12BE55BCD00272BB6 /* LoginNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNetworkAdapter.swift; sourceTree = "<group>"; };
+		A547C4B12BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupNetworkAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A51AF3142BE8B30700A7B4AD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A51AF3152BE8B33800A7B4AD /* LoginPageViewModelTests.swift */,
+				A51AF3172BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		A51AF3212BE8BEE500A7B4AD /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				A51AF3222BE8BEF800A7B4AD /* SignupPageViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		A547C43C2BE3BFE200272BB6 = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +185,7 @@
 				A547C48A2BE44F9C00272BB6 /* Styleguide.swift */,
 				A547C4A12BE456E700272BB6 /* PageHeader.swift */,
 				A547C4A72BE4747D00272BB6 /* ViewExtension.swift */,
+				A51AF31A2BE8B50200A7B4AD /* Router.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -175,6 +203,7 @@
 		A547C49A2BE4548800272BB6 /* SignupPage */ = {
 			isa = PBXGroup;
 			children = (
+				A51AF3212BE8BEE500A7B4AD /* Tests */,
 				A547C4972BE4548100272BB6 /* SignupPage.swift */,
 				A547C49B2BE454CD00272BB6 /* SignupPageViewModel.swift */,
 			);
@@ -184,9 +213,10 @@
 		A547C4AA2BE55A7200272BB6 /* LoginPage */ = {
 			isa = PBXGroup;
 			children = (
+				A51AF3142BE8B30700A7B4AD /* Tests */,
 				A547C4AB2BE55AA600272BB6 /* LoginPage.swift */,
 				A547C4AE2BE55AD800272BB6 /* LoginPageViewModel.swift */,
-				A547C4B12BE55BCD00272BB6 /* LoginNetworkAdapter.swift */,
+				A547C4B12BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -311,8 +341,9 @@
 				A547C4AF2BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */,
 				A547C4922BE4503100272BB6 /* SecondaryButton.swift in Sources */,
 				A547C4AC2BE55AA600272BB6 /* LoginPage.swift in Sources */,
+				A51AF31B2BE8B50200A7B4AD /* Router.swift in Sources */,
 				A547C4A82BE4747D00272BB6 /* ViewExtension.swift in Sources */,
-				A547C4B22BE55BCD00272BB6 /* LoginNetworkAdapter.swift in Sources */,
+				A547C4B22BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift in Sources */,
 				A547C48F2BE44FEE00272BB6 /* PrimaryButton.swift in Sources */,
 				A547C4492BE3BFE200272BB6 /* SneakerverseV2App.swift in Sources */,
 				A547C4982BE4548100272BB6 /* SignupPage.swift in Sources */,
@@ -329,13 +360,18 @@
 				A547C4842BE44EFF00272BB6 /* OnboardingPageViewModel.swift in Sources */,
 				A547C4A02BE4564A00272BB6 /* AppDelegate.swift in Sources */,
 				A547C49D2BE454CD00272BB6 /* SignupPageViewModel.swift in Sources */,
+				A51AF3182BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift in Sources */,
+				A51AF3232BE8BEF800A7B4AD /* SignupPageViewModelTests.swift in Sources */,
 				A547C4902BE44FEE00272BB6 /* PrimaryButton.swift in Sources */,
 				A547C4B02BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */,
-				A547C4B32BE55BCD00272BB6 /* LoginNetworkAdapter.swift in Sources */,
+				A547C4B32BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift in Sources */,
+				A51AF31C2BE8B50200A7B4AD /* Router.swift in Sources */,
 				A547C4AD2BE55AA600272BB6 /* LoginPage.swift in Sources */,
 				A547C48C2BE44F9C00272BB6 /* Styleguide.swift in Sources */,
+				A51AF3162BE8B33800A7B4AD /* LoginPageViewModelTests.swift in Sources */,
 				A547C4A62BE4570B00272BB6 /* BasicInputField.swift in Sources */,
 				A547C4A32BE456E700272BB6 /* PageHeader.swift in Sources */,
+				A51AF3202BE8BD7000A7B4AD /* ViewExtension.swift in Sources */,
 				A547C4852BE44F1200272BB6 /* OnboardingPage.swift in Sources */,
 				A547C4992BE4548100272BB6 /* SignupPage.swift in Sources */,
 			);

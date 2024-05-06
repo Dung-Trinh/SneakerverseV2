@@ -5,7 +5,7 @@ import GoogleSignIn
 @main
 struct SneakerverseV2App: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var router = Router()
+    @StateObject private var router = RouterImpl()
     
     var body: some Scene {
         WindowGroup {

@@ -7,12 +7,12 @@ import FirebaseAuth
 
 struct LoginPage<ViewModel>: View where ViewModel: LoginPageViewModel {
     @StateObject var viewModel: ViewModel
-    @EnvironmentObject var router: Router
+    @EnvironmentObject var router: RouterImpl
     
     var body: some View {
         VStack {
             PageHeader(
-                title: "Create an account",
+                title: "Log in",
                 subtitle: "Please enter your data."
             )
             VStack(spacing: Styleguide.Margin.medium) {
@@ -32,7 +32,21 @@ struct LoginPage<ViewModel>: View where ViewModel: LoginPageViewModel {
                         }
                     }
                 )
-                GoogleSignInButton(action: handleGoogleLogin)
+                HStack {
+                    dividerLine
+                    Text("OR").foregroundColor(.gray)
+                    dividerLine
+                }
+                PrimaryButton(
+                    title: "Log in with Google",
+                    color: .gray.opacity(0.8),
+                    image: Image("googleLogo"),
+                    action: {
+                        Task {
+                            await viewModel.handleSignInButton(viewController: getRootViewController())
+                        }
+                    }
+                )
             }
             
             Spacer()
@@ -72,9 +86,10 @@ struct LoginPage<ViewModel>: View where ViewModel: LoginPageViewModel {
         )
     }
     
-    private func handleGoogleLogin() {
-        Task {
-            await viewModel.handleSignInButton(viewController: getRootViewController())
+    @ViewBuilder
+    private var dividerLine: some View {
+        VStack {
+            Divider().background(.gray)
         }
     }
 }
