@@ -1,9 +1,4 @@
 import SwiftUI
-import _AuthenticationServices_SwiftUI
-import FirebaseCore
-import GoogleSignInSwift
-import GoogleSignIn
-import FirebaseAuth
 
 struct LoginPage<ViewModel>: View where ViewModel: LoginPageViewModel {
     @StateObject var viewModel: ViewModel

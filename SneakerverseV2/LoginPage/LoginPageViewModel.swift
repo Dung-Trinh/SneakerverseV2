@@ -15,7 +15,7 @@ protocol LoginPageViewModel: ObservableObject {
 }
 
 class LoginPageViewModelImpl: LoginPageViewModel {
-    @Published var email = "duuung1998+1@gmail.com"
+    @Published var email = ""
     @Published var password = ""
     @Published var errorMessage: String?
     
@@ -35,6 +35,7 @@ class LoginPageViewModelImpl: LoginPageViewModel {
         
         do {
             try await loginAdapter.login(email: email, password: password)
+            router?.pushView(view: .homePage)
         } catch let err {
             print(err)
             errorMessage = err.localizedDescription

@@ -29,7 +29,7 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
                 case "SignupPage":
                     SignupPage(viewModel: SignupPageViewModelImpl())
                 case "HomePage":
-                    Text("HomePage")
+                    HomePage(viewModel: HomePageViewModelImpl())
                 default:
                     Text("DefaultPage")
                 }
