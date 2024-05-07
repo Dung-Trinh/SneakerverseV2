@@ -63,6 +63,12 @@
 		A55DAC4A2BE9775700E1822B /* AccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC482BE9775700E1822B /* AccountPage.swift */; };
 		A55DAC4C2BE9777000E1822B /* AccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC4B2BE9777000E1822B /* AccountPageViewModel.swift */; };
 		A55DAC4D2BE9777000E1822B /* AccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC4B2BE9777000E1822B /* AccountPageViewModel.swift */; };
+		A55DAC512BE9814F00E1822B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC502BE9814F00E1822B /* CarouselView.swift */; };
+		A55DAC532BE9818700E1822B /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC522BE9818700E1822B /* CarouselViewModel.swift */; };
+		A55DAC542BEA26BC00E1822B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC502BE9814F00E1822B /* CarouselView.swift */; };
+		A55DAC552BEA26C100E1822B /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC522BE9818700E1822B /* CarouselViewModel.swift */; };
+		A55DAC562BEA26F900E1822B /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC312BE9749500E1822B /* HomePage.swift */; };
+		A55DAC572BEA278900E1822B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547C44C2BE3BFE500272BB6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +115,8 @@
 		A55DAC452BE9772B00E1822B /* NewsPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewModel.swift; sourceTree = "<group>"; };
 		A55DAC482BE9775700E1822B /* AccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPage.swift; sourceTree = "<group>"; };
 		A55DAC4B2BE9777000E1822B /* AccountPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViewModel.swift; sourceTree = "<group>"; };
+		A55DAC502BE9814F00E1822B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		A55DAC522BE9818700E1822B /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +205,7 @@
 		A547C47E2BE44E7700272BB6 /* OnboardingPage */ = {
 			isa = PBXGroup;
 			children = (
+				A55DAC4E2BE9811200E1822B /* CarouselView */,
 				A547C47F2BE44EC100272BB6 /* OnboardingPage.swift */,
 				A547C4822BE44EFF00272BB6 /* OnboardingPageViewModel.swift */,
 			);
@@ -282,6 +291,15 @@
 				A55DAC3F2BE976F900E1822B /* CalendarPageViewModel.swift */,
 			);
 			path = CalendarPage;
+			sourceTree = "<group>";
+		};
+		A55DAC4E2BE9811200E1822B /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				A55DAC502BE9814F00E1822B /* CarouselView.swift */,
+				A55DAC522BE9818700E1822B /* CarouselViewModel.swift */,
+			);
+			path = CarouselView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55DAC572BEA278900E1822B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +425,8 @@
 				A55DAC462BE9772B00E1822B /* NewsPageViewModel.swift in Sources */,
 				A547C4A52BE4570B00272BB6 /* BasicInputField.swift in Sources */,
 				A55DAC432BE9771200E1822B /* NewsPage.swift in Sources */,
+				A55DAC532BE9818700E1822B /* CarouselViewModel.swift in Sources */,
+				A55DAC512BE9814F00E1822B /* CarouselView.swift in Sources */,
 				A55DAC492BE9775700E1822B /* AccountPage.swift in Sources */,
 				A55DAC3D2BE976E000E1822B /* CalendarPage.swift in Sources */,
 				A547C4AF2BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */,
@@ -431,8 +452,10 @@
 				A547C4932BE4503100272BB6 /* SecondaryButton.swift in Sources */,
 				A547C4842BE44EFF00272BB6 /* OnboardingPageViewModel.swift in Sources */,
 				A55DAC472BE9772B00E1822B /* NewsPageViewModel.swift in Sources */,
+				A55DAC552BEA26C100E1822B /* CarouselViewModel.swift in Sources */,
 				A547C4A02BE4564A00272BB6 /* AppDelegate.swift in Sources */,
 				A547C49D2BE454CD00272BB6 /* SignupPageViewModel.swift in Sources */,
+				A55DAC542BEA26BC00E1822B /* CarouselView.swift in Sources */,
 				A51AF3182BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift in Sources */,
 				A51AF3232BE8BEF800A7B4AD /* SignupPageViewModelTests.swift in Sources */,
 				A547C4902BE44FEE00272BB6 /* PrimaryButton.swift in Sources */,
@@ -444,6 +467,7 @@
 				A547C4AD2BE55AA600272BB6 /* LoginPage.swift in Sources */,
 				A55DAC4A2BE9775700E1822B /* AccountPage.swift in Sources */,
 				A55DAC352BE974C100E1822B /* HomePageViewModel.swift in Sources */,
+				A55DAC562BEA26F900E1822B /* HomePage.swift in Sources */,
 				A547C48C2BE44F9C00272BB6 /* Styleguide.swift in Sources */,
 				A51AF3162BE8B33800A7B4AD /* LoginPageViewModelTests.swift in Sources */,
 				A547C4A62BE4570B00272BB6 /* BasicInputField.swift in Sources */,

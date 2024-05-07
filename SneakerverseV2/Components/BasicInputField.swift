@@ -27,7 +27,7 @@ struct BasicInputField: View {
                         self.isPasswordTextVisible.toggle()
                     } label: {
                         Image(systemName: isPasswordTextVisible ? "eye.slash" : "eye" ).foregroundColor(.black)
-                    }
+                    }.contentTransition(.symbolEffect(.replace))
                 } else {
                     TextField(placeholderText, text: $input)
                         .autocorrectionDisabled()

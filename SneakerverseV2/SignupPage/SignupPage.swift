@@ -16,7 +16,7 @@ struct SignupPage<ViewModel>: View where ViewModel: SignupPageViewModel {
                 passwordInputField
                 PrimaryButton(
                     title: "Sign up",
-                    color: .blue,
+                    color: Styleguide.PrimaryColor.purple,
                     action: {
                         Task {
                             await viewModel.didTapSignup()

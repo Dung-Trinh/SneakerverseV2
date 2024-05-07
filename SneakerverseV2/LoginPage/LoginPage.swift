@@ -20,7 +20,7 @@ struct LoginPage<ViewModel>: View where ViewModel: LoginPageViewModel {
                 }
                 PrimaryButton(
                     title: "Login",
-                    color: .blue,
+                    color: Styleguide.PrimaryColor.purple,
                     action: {
                         Task {
                             await viewModel.didTappedLogin()

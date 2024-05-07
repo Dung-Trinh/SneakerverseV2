@@ -8,11 +8,12 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
         NavigationStack(
             path: $router.navPath
         ) {
-            VStack {
+            Image("sneakerverseLogo")
+            VStack(alignment: .center) {
                 TabView {
-                    Text("First")
-                    Text("Second")
-                    Text("Third")
+                    CarouselView(viewModel: CarouselViewModelImpl(title: "Sneakers & Streetwear", subtitle: "Discover the latest news, trends and events ", image: Image("onboardingNews")))
+                    CarouselView(viewModel: CarouselViewModelImpl(title: "Always up-to-date", subtitle: "the hottest sneaker releases directly on your phone", image: Image("onboardingUpToDate")))
+                    CarouselView(viewModel: CarouselViewModelImpl(title: "Alerts", subtitle: "never miss a release thanks to alerts", image: Image("onboardingAlert")))
                 }
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
@@ -41,14 +42,14 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
         VStack(spacing: Styleguide.Margin.medium) {
             SecondaryButton(
                 title: "Sign up",
-                color: .blue,
+                color: Styleguide.PrimaryColor.purple,
                 action: {
                     router.pushView(view: .signupPage)
                 }
             )
             PrimaryButton(
                 title: "Login",
-                color: .blue,
+                color: Styleguide.PrimaryColor.purple,
                 action: {
                     router.pushView(view: .loginPage)
                 }
