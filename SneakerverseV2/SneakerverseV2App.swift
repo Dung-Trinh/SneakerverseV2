@@ -1,10 +1,24 @@
 import SwiftUI
+import FirebaseCore
+import GoogleSignIn
 
 @main
 struct SneakerverseV2App: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @StateObject private var router = RouterImpl()
+    @State var isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn")
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isUserLoggedIn {
+                HomePage(viewModel: HomePageViewModelImpl()).environmentObject(router)
+            } else {
+                OnboardingPage(viewModel: OnboardingPageViewModelImpl())
+                    .onOpenURL { url in
+                        GIDSignIn.sharedInstance.handle(url)
+                    }
+                    .environmentObject(router)
+            }
         }
     }
 }
