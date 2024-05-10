@@ -11,12 +11,14 @@ struct PageHeader: View {
                 Text(title)
                     .font(.title)
                     .foregroundColor(.black)
+                    .multilineTextAlignment(.center)
                     .if(textAlignment == .center, transform: { view in
                         view.frame(maxWidth: .infinity, alignment: .center)
                     })
                 Text(subtitle)
                     .font(.subheadline)
                     .foregroundColor(.gray)
+                    .multilineTextAlignment(.center)
                     .if(textAlignment == .center, transform: { view in
                         view.frame(maxWidth: .infinity, alignment: .center)
                     })

@@ -64,11 +64,14 @@
 		A55DAC4C2BE9777000E1822B /* AccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC4B2BE9777000E1822B /* AccountPageViewModel.swift */; };
 		A55DAC4D2BE9777000E1822B /* AccountPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC4B2BE9777000E1822B /* AccountPageViewModel.swift */; };
 		A55DAC512BE9814F00E1822B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC502BE9814F00E1822B /* CarouselView.swift */; };
-		A55DAC532BE9818700E1822B /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC522BE9818700E1822B /* CarouselViewModel.swift */; };
+		A55DAC532BE9818700E1822B /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC522BE9818700E1822B /* OnboardingContent.swift */; };
 		A55DAC542BEA26BC00E1822B /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC502BE9814F00E1822B /* CarouselView.swift */; };
-		A55DAC552BEA26C100E1822B /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC522BE9818700E1822B /* CarouselViewModel.swift */; };
+		A55DAC552BEA26C100E1822B /* OnboardingContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC522BE9818700E1822B /* OnboardingContent.swift */; };
 		A55DAC562BEA26F900E1822B /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55DAC312BE9749500E1822B /* HomePage.swift */; };
 		A55DAC572BEA278900E1822B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547C44C2BE3BFE500272BB6 /* Assets.xcassets */; };
+		A5BFF5A82BEE39FA00346373 /* OnboardingNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFF5A72BEE39FA00346373 /* OnboardingNetworkAdapter.swift */; };
+		A5BFF5AB2BEE3AC900346373 /* SwiftDotenv in Frameworks */ = {isa = PBXBuildFile; productRef = A5BFF5AA2BEE3AC900346373 /* SwiftDotenv */; };
+		A5BFF5AE2BEE3E4A00346373 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A5BFF5AD2BEE3E4A00346373 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,7 +119,8 @@
 		A55DAC482BE9775700E1822B /* AccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPage.swift; sourceTree = "<group>"; };
 		A55DAC4B2BE9777000E1822B /* AccountPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViewModel.swift; sourceTree = "<group>"; };
 		A55DAC502BE9814F00E1822B /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
-		A55DAC522BE9818700E1822B /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		A55DAC522BE9818700E1822B /* OnboardingContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContent.swift; sourceTree = "<group>"; };
+		A5BFF5A72BEE39FA00346373 /* OnboardingNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingNetworkAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,8 +128,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5BFF5AB2BEE3AC900346373 /* SwiftDotenv in Frameworks */,
 				A547C4742BE44D1300272BB6 /* FirebaseAuth in Frameworks */,
 				A547C4762BE44D1300272BB6 /* FirebaseFirestore in Frameworks */,
+				A5BFF5AE2BEE3E4A00346373 /* Alamofire in Frameworks */,
 				A547C4792BE44D7900272BB6 /* GoogleSignIn in Frameworks */,
 				A547C47B2BE44D7900272BB6 /* GoogleSignInSwift in Frameworks */,
 			);
@@ -208,6 +214,8 @@
 				A55DAC4E2BE9811200E1822B /* CarouselView */,
 				A547C47F2BE44EC100272BB6 /* OnboardingPage.swift */,
 				A547C4822BE44EFF00272BB6 /* OnboardingPageViewModel.swift */,
+				A5BFF5A72BEE39FA00346373 /* OnboardingNetworkAdapter.swift */,
+				A55DAC522BE9818700E1822B /* OnboardingContent.swift */,
 			);
 			path = OnboardingPage;
 			sourceTree = "<group>";
@@ -297,7 +305,6 @@
 			isa = PBXGroup;
 			children = (
 				A55DAC502BE9814F00E1822B /* CarouselView.swift */,
-				A55DAC522BE9818700E1822B /* CarouselViewModel.swift */,
 			);
 			path = CarouselView;
 			sourceTree = "<group>";
@@ -323,6 +330,8 @@
 				A547C4752BE44D1300272BB6 /* FirebaseFirestore */,
 				A547C4782BE44D7900272BB6 /* GoogleSignIn */,
 				A547C47A2BE44D7900272BB6 /* GoogleSignInSwift */,
+				A5BFF5AA2BEE3AC900346373 /* SwiftDotenv */,
+				A5BFF5AD2BEE3E4A00346373 /* Alamofire */,
 			);
 			productName = SneakerverseV2;
 			productReference = A547C4452BE3BFE200272BB6 /* SneakerverseV2.app */;
@@ -378,6 +387,8 @@
 			packageReferences = (
 				A547C4722BE44D1300272BB6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A547C4772BE44D7900272BB6 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				A5BFF5A92BEE3AC900346373 /* XCRemoteSwiftPackageReference "swift-dotenv" */,
+				A5BFF5AC2BEE3E4900346373 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = A547C4462BE3BFE200272BB6 /* Products */;
 			projectDirPath = "";
@@ -425,10 +436,11 @@
 				A55DAC462BE9772B00E1822B /* NewsPageViewModel.swift in Sources */,
 				A547C4A52BE4570B00272BB6 /* BasicInputField.swift in Sources */,
 				A55DAC432BE9771200E1822B /* NewsPage.swift in Sources */,
-				A55DAC532BE9818700E1822B /* CarouselViewModel.swift in Sources */,
+				A55DAC532BE9818700E1822B /* OnboardingContent.swift in Sources */,
 				A55DAC512BE9814F00E1822B /* CarouselView.swift in Sources */,
 				A55DAC492BE9775700E1822B /* AccountPage.swift in Sources */,
 				A55DAC3D2BE976E000E1822B /* CalendarPage.swift in Sources */,
+				A5BFF5A82BEE39FA00346373 /* OnboardingNetworkAdapter.swift in Sources */,
 				A547C4AF2BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */,
 				A547C4922BE4503100272BB6 /* SecondaryButton.swift in Sources */,
 				A547C4AC2BE55AA600272BB6 /* LoginPage.swift in Sources */,
@@ -452,7 +464,7 @@
 				A547C4932BE4503100272BB6 /* SecondaryButton.swift in Sources */,
 				A547C4842BE44EFF00272BB6 /* OnboardingPageViewModel.swift in Sources */,
 				A55DAC472BE9772B00E1822B /* NewsPageViewModel.swift in Sources */,
-				A55DAC552BEA26C100E1822B /* CarouselViewModel.swift in Sources */,
+				A55DAC552BEA26C100E1822B /* OnboardingContent.swift in Sources */,
 				A547C4A02BE4564A00272BB6 /* AppDelegate.swift in Sources */,
 				A547C49D2BE454CD00272BB6 /* SignupPageViewModel.swift in Sources */,
 				A55DAC542BEA26BC00E1822B /* CarouselView.swift in Sources */,
@@ -761,6 +773,22 @@
 				minimumVersion = 7.1.0;
 			};
 		};
+		A5BFF5A92BEE3AC900346373 /* XCRemoteSwiftPackageReference "swift-dotenv" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thebarndog/swift-dotenv";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.1;
+			};
+		};
+		A5BFF5AC2BEE3E4900346373 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -783,6 +811,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A547C4772BE44D7900272BB6 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		A5BFF5AA2BEE3AC900346373 /* SwiftDotenv */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5BFF5A92BEE3AC900346373 /* XCRemoteSwiftPackageReference "swift-dotenv" */;
+			productName = SwiftDotenv;
+		};
+		A5BFF5AD2BEE3E4A00346373 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A5BFF5AC2BEE3E4900346373 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
