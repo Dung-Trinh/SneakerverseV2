@@ -16,6 +16,7 @@ class RouterImpl: Router {
     @Published var navPath: NavigationPath = .init()
     var childViews: [DestinationView] = []
     
+    @MainActor
     func pushView(view: DestinationView) {
         navPath.append(view.rawValue)
         childViews.append(view)

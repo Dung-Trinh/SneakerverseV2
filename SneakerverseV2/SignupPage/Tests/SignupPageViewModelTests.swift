@@ -29,7 +29,7 @@ class SignupPageViewModelTests: XCTest {
     
     func testDidTapLogin() async {
         XCTAssertEqual(router.navPath.count, 0)
-        sut.didTapLogin()
+        await sut.didTapLogin()
         XCTAssertEqual(router.navPath.count, 1)
         XCTAssertEqual(router.childViews.last, .loginPage)
     }

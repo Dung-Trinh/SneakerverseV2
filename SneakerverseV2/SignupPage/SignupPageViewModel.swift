@@ -39,6 +39,7 @@ class SignupPageViewModelImpl: SignupPageViewModel {
         }
     }
     
+    @MainActor 
     func didTapLogin() {
         router?.pushView(view: .loginPage)
     }

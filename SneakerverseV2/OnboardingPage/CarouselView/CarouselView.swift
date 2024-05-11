@@ -1,19 +1,24 @@
 import SwiftUI
 
-struct CarouselView<ViewModel>: View where ViewModel: CarouselViewModel {
-    @StateObject var viewModel: ViewModel
+struct CarouselView: View {
+    var content: OnboardingContent
     
     var body: some View {
         VStack(alignment: .center) {
-            viewModel.image
-                .resizable()
-                .scaledToFit()
+            AsyncImage(url: URL(string: content.imageUrl ?? "")) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .scaledToFit()
+            .frame(maxHeight: 300)
+            .cornerRadius(20)
+
             PageHeader(
-                title: viewModel.title,
-                subtitle: viewModel.subtitle,
+                title: content.title,
+                subtitle: content.subtitle,
                 textAlignment: .center
-            )
-            .padding(.bottom, Styleguide.Margin.extraLarge)
+            ).padding(.bottom, Styleguide.Margin.extraLarge)
         }
     }
 }

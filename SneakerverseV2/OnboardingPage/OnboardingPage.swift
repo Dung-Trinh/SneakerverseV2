@@ -11,9 +11,9 @@ struct OnboardingPage<ViewModel>: View where ViewModel: OnboardingPageViewModel 
             Image("sneakerverseLogo")
             VStack(alignment: .center) {
                 TabView {
-                    CarouselView(viewModel: CarouselViewModelImpl(title: "Sneakers & Streetwear", subtitle: "Discover the latest news, trends and events ", image: Image("onboardingNews")))
-                    CarouselView(viewModel: CarouselViewModelImpl(title: "Always up-to-date", subtitle: "the hottest sneaker releases directly on your phone", image: Image("onboardingUpToDate")))
-                    CarouselView(viewModel: CarouselViewModelImpl(title: "Alerts", subtitle: "never miss a release thanks to alerts", image: Image("onboardingAlert")))
+                    ForEach(viewModel.carouselContent) { content in
+                        CarouselView(content: content)
+                    }
                 }
                 .tabViewStyle(.page)
                 .indexViewStyle(.page(backgroundDisplayMode: .always))
