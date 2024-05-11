@@ -13,6 +13,14 @@
 		A51AF31C2BE8B50200A7B4AD /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF31A2BE8B50200A7B4AD /* Router.swift */; };
 		A51AF3202BE8BD7000A7B4AD /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4A72BE4747D00272BB6 /* ViewExtension.swift */; };
 		A51AF3232BE8BEF800A7B4AD /* SignupPageViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51AF3222BE8BEF800A7B4AD /* SignupPageViewModelTests.swift */; };
+		A52133142BEFC57E00226CC8 /* NewsNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52133132BEFC57E00226CC8 /* NewsNetworkAdapter.swift */; };
+		A52133162BEFC6BA00226CC8 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52133152BEFC6BA00226CC8 /* NewsArticle.swift */; };
+		A52133172BEFD2E300226CC8 /* OnboardingNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BFF5A72BEE39FA00346373 /* OnboardingNetworkAdapter.swift */; };
+		A52133182BEFD34B00226CC8 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52133152BEFC6BA00226CC8 /* NewsArticle.swift */; };
+		A52133192BEFD38E00226CC8 /* NewsNetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52133132BEFC57E00226CC8 /* NewsNetworkAdapter.swift */; };
+		A521331C2BF0159800226CC8 /* BlogPostTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521331B2BF0159800226CC8 /* BlogPostTile.swift */; };
+		A521331E2BF015B700226CC8 /* BlogPostCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521331D2BF015B700226CC8 /* BlogPostCategory.swift */; };
+		A52133202BF015D400226CC8 /* ChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A521331F2BF015D400226CC8 /* ChipView.swift */; };
 		A547C4492BE3BFE200272BB6 /* SneakerverseV2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A547C4482BE3BFE200272BB6 /* SneakerverseV2App.swift */; };
 		A547C44D2BE3BFE500272BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547C44C2BE3BFE500272BB6 /* Assets.xcassets */; };
 		A547C4502BE3BFE500272BB6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A547C44F2BE3BFE500272BB6 /* Preview Assets.xcassets */; };
@@ -89,6 +97,11 @@
 		A51AF3172BE8B37600A7B4AD /* MockedLoginSignupNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedLoginSignupNetworkAdapter.swift; sourceTree = "<group>"; };
 		A51AF31A2BE8B50200A7B4AD /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A51AF3222BE8BEF800A7B4AD /* SignupPageViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPageViewModelTests.swift; sourceTree = "<group>"; };
+		A52133132BEFC57E00226CC8 /* NewsNetworkAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsNetworkAdapter.swift; sourceTree = "<group>"; };
+		A52133152BEFC6BA00226CC8 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
+		A521331B2BF0159800226CC8 /* BlogPostTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostTile.swift; sourceTree = "<group>"; };
+		A521331D2BF015B700226CC8 /* BlogPostCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostCategory.swift; sourceTree = "<group>"; };
+		A521331F2BF015D400226CC8 /* ChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipView.swift; sourceTree = "<group>"; };
 		A547C4452BE3BFE200272BB6 /* SneakerverseV2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SneakerverseV2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A547C4482BE3BFE200272BB6 /* SneakerverseV2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SneakerverseV2App.swift; sourceTree = "<group>"; };
 		A547C44C2BE3BFE500272BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +177,15 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		A521331A2BF0158A00226CC8 /* BlogPost */ = {
+			isa = PBXGroup;
+			children = (
+				A521331B2BF0159800226CC8 /* BlogPostTile.swift */,
+				A521331D2BF015B700226CC8 /* BlogPostCategory.swift */,
+			);
+			path = BlogPost;
+			sourceTree = "<group>";
+		};
 		A547C43C2BE3BFE200272BB6 = {
 			isa = PBXGroup;
 			children = (
@@ -237,6 +259,7 @@
 				A547C48E2BE44FEE00272BB6 /* PrimaryButton.swift */,
 				A547C4912BE4503100272BB6 /* SecondaryButton.swift */,
 				A547C4A42BE4570B00272BB6 /* BasicInputField.swift */,
+				A521331F2BF015D400226CC8 /* ChipView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -286,8 +309,11 @@
 		A55DAC372BE976A100E1822B /* NewsPage */ = {
 			isa = PBXGroup;
 			children = (
+				A521331A2BF0158A00226CC8 /* BlogPost */,
 				A55DAC422BE9771200E1822B /* NewsPage.swift */,
 				A55DAC452BE9772B00E1822B /* NewsPageViewModel.swift */,
+				A52133132BEFC57E00226CC8 /* NewsNetworkAdapter.swift */,
+				A52133152BEFC6BA00226CC8 /* NewsArticle.swift */,
 			);
 			path = NewsPage;
 			sourceTree = "<group>";
@@ -429,10 +455,12 @@
 				A547C4832BE44EFF00272BB6 /* OnboardingPageViewModel.swift in Sources */,
 				A547C4A22BE456E700272BB6 /* PageHeader.swift in Sources */,
 				A55DAC342BE974C100E1822B /* HomePageViewModel.swift in Sources */,
+				A521331C2BF0159800226CC8 /* BlogPostTile.swift in Sources */,
 				A55DAC4C2BE9777000E1822B /* AccountPageViewModel.swift in Sources */,
 				A547C48B2BE44F9C00272BB6 /* Styleguide.swift in Sources */,
 				A547C49C2BE454CD00272BB6 /* SignupPageViewModel.swift in Sources */,
 				A55DAC322BE9749500E1822B /* HomePage.swift in Sources */,
+				A52133202BF015D400226CC8 /* ChipView.swift in Sources */,
 				A55DAC462BE9772B00E1822B /* NewsPageViewModel.swift in Sources */,
 				A547C4A52BE4570B00272BB6 /* BasicInputField.swift in Sources */,
 				A55DAC432BE9771200E1822B /* NewsPage.swift in Sources */,
@@ -444,11 +472,14 @@
 				A547C4AF2BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */,
 				A547C4922BE4503100272BB6 /* SecondaryButton.swift in Sources */,
 				A547C4AC2BE55AA600272BB6 /* LoginPage.swift in Sources */,
+				A52133162BEFC6BA00226CC8 /* NewsArticle.swift in Sources */,
 				A51AF31B2BE8B50200A7B4AD /* Router.swift in Sources */,
 				A547C4A82BE4747D00272BB6 /* ViewExtension.swift in Sources */,
 				A55DAC402BE976F900E1822B /* CalendarPageViewModel.swift in Sources */,
 				A547C4B22BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift in Sources */,
 				A547C48F2BE44FEE00272BB6 /* PrimaryButton.swift in Sources */,
+				A52133142BEFC57E00226CC8 /* NewsNetworkAdapter.swift in Sources */,
+				A521331E2BF015B700226CC8 /* BlogPostCategory.swift in Sources */,
 				A547C4492BE3BFE200272BB6 /* SneakerverseV2App.swift in Sources */,
 				A547C4982BE4548100272BB6 /* SignupPage.swift in Sources */,
 				A547C49F2BE4564A00272BB6 /* AppDelegate.swift in Sources */,
@@ -473,10 +504,13 @@
 				A547C4902BE44FEE00272BB6 /* PrimaryButton.swift in Sources */,
 				A547C4B02BE55AD800272BB6 /* LoginPageViewModel.swift in Sources */,
 				A547C4B32BE55BCD00272BB6 /* LoginSignupNetworkAdapter.swift in Sources */,
+				A52133182BEFD34B00226CC8 /* NewsArticle.swift in Sources */,
 				A55DAC4D2BE9777000E1822B /* AccountPageViewModel.swift in Sources */,
 				A51AF31C2BE8B50200A7B4AD /* Router.swift in Sources */,
 				A55DAC412BE976F900E1822B /* CalendarPageViewModel.swift in Sources */,
 				A547C4AD2BE55AA600272BB6 /* LoginPage.swift in Sources */,
+				A52133172BEFD2E300226CC8 /* OnboardingNetworkAdapter.swift in Sources */,
+				A52133192BEFD38E00226CC8 /* NewsNetworkAdapter.swift in Sources */,
 				A55DAC4A2BE9775700E1822B /* AccountPage.swift in Sources */,
 				A55DAC352BE974C100E1822B /* HomePageViewModel.swift in Sources */,
 				A55DAC562BEA26F900E1822B /* HomePage.swift in Sources */,

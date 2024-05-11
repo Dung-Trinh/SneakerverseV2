@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct CarouselView: View{
+struct CarouselView: View {
     var content: OnboardingContent
     
     var body: some View {

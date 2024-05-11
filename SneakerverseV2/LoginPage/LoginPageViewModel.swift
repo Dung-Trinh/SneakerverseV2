@@ -30,7 +30,8 @@ class LoginPageViewModelImpl: LoginPageViewModel {
         self.init(loginAdapter: LoginSignupNetworkAdapterImpl())
     }
     
-    @MainActor func didTappedLogin() async {
+    @MainActor 
+    func didTappedLogin() async {
         validateInput()
         
         do {
@@ -45,7 +46,7 @@ class LoginPageViewModelImpl: LoginPageViewModel {
     func handleSignInButton(viewController: UIViewController) async {
         do {
             try await loginAdapter.loginWithGoogle(viewController: viewController)
-            router?.pushView(view: .homePage)
+            await router?.pushView(view: .homePage)
         } catch {
             // TODO: error handling
         }
